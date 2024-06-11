@@ -5,10 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm i",
+    "host": "vite --host",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-     "postinstall": "ls -la node_modules/.bin"
+    "preview": "vite preview",
+    "migrate": "prisma migrate deploy",
+    "generate": "prisma generate",
+    "setup": "npm install && npm run generate && npm run migrate"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
